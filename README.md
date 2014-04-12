@@ -1,4 +1,4 @@
 SendingEmail
 ============
 
-A example of email sender using c#
+Example of using C# to build a form to send emails.
