@@ -1,0 +1,27 @@
+﻿@model SendingEmail.Models.EmailModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Sending Email</h2>
+
+@using (@Html.BeginForm("SendEmail", "Home"))
+{
+    <p>
+        @Html.DisplayNameFor(x => x.To)
+        @Html.TextBoxFor(x => x.To)
+    </p>
+    <p>
+        @Html.DisplayNameFor(x => x.Subject)
+        @Html.TextBoxFor(x => x.Subject)
+    </p>
+    <p>
+        @Html.DisplayNameFor(x => x.Body)
+        @Html.TextAreaFor(x => x.Body)
+    </p>
+    
+    <input type="reset" value="Limpar" />
+    <input type="submit" value="Enviar" />    
+}
